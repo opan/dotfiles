@@ -117,6 +117,7 @@ nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 " }
 
+
 " coc.nvim config {
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
@@ -146,6 +147,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " }
 
+
 " ack.vim config {
 " use ag instead
 let g:ackprg = 'ag --vimgrep'
@@ -156,10 +158,12 @@ let g:ackprg = 'ag --vimgrep'
 " let g:ctrlp_use_caching = 0
 " }
 
+
 " vim-go config {
 set completeopt=preview
 let g:go_fmt_command = "goimports"
 " }
+
 
 " Surround config {
 let g:surround_{char2nr('=')} = "<%= \r %>"
@@ -185,10 +189,12 @@ let g:NERDSpaceDelims = 1
 noremap <leader>d :NERDTreeToggle<CR>
 " }
 
+
 " Vim rubocop config {
 let g:vimrubocop_keymap = 0
 nmap <Leader>r :RuboCop<CR>
 " }
+
 
 " rainbow-parentheses.vim config {
 let g:rbpt_colorpairs = [
@@ -217,24 +223,11 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 " }
 
-" let g:ycm_min_num_of_chars_for_completion = 1
-
-let g:loaded_python_provider = 0
-
-" Change the absolute path based on your need
-" let g:ruby_host_prog = 'RBENV_VERSION=2.5.0 rbenv which neovim-ruby-host'
 
 " mappings {
-
-" mapping escape to double comma
-" imap ,, <Esc>
-" vmap ,, <Esc>
-" nmap ,, <Esc>
-
 nnoremap <s-left> :tabprevious <CR>
 nnoremap <s-right> :tabnext<CR>
 nnoremap <leader>l :buffers<CR>
-" nnoremap <esc> :noh<return><CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>c :tabclose<CR>
 nnoremap <leader>w :Window<CR>

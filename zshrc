@@ -65,15 +65,24 @@ plugins=(
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export POWERLINE_PATH="/Users/opanmustopah/Library/Python/3.6/lib/python/site-packages/powerline"
+export PATH=$PATH:/Users/opanmustopah/.chefdk/gem/ruby/2.6.0/bin
 
 # Load GO languange
-export GOPATH=$HOME/Projects/go-workspace
+export GOPATH=/opt/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
 source $ZSH/oh-my-zsh.sh
 
+# Maven configuration
+export PATH=$PATH:/opt/apache-maven-3.6.0/bin
+
+# Load Visual Studia Code
+export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+
 # User configuration
+
+alias please="sudo"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -101,14 +110,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-#
-# Credentials
-#
-# AWS account for opan@123ish.com
-# Access Key ID: KEYACCESS
-# Secret Access Key: SomethingSecret
-
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -152,13 +153,43 @@ BARITO_ROUTER_MARKET_URL=""
 BARITO_PROFILE_API_PATH=""
 BARITO_PROFILE_API_BY_CLUSTERNAME_PATH=""
 
-# Config for related Kubernetes
+# Config related to Kubernetes
 alias k="kubectl"
 alias mk="minikube"
 alias kx="kubectx"
 
+# Config related to Docker
+alias dk="docker"
+alias dkrmi='dk rmi -f $(dk images -aq -f dangling=true)'
+alias dkc="docker-compose"
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/opanmustopah/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/opanmustopah/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/opanmustopah/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/opanmustopah/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Config kops
+export KOPS_STATE_STORE=s3://aws-kops/kops
+
+# Config Hanami
+alias hn="bundle exec hanami"
+
+# Config prometheus
+export PATH=$PATH:/opt/prometheus-2.9.2.darwin-amd64/bin
+
+# Config Vault
+export VAULT_ADDR='http://127.0.0.1:8200'
+
+export LC_ALL=en_US.UTF-8
+
+# Config KIND (Kubernetes in Docker)
+alias start_kind='export KUBECONFIG="$(kind get kubeconfig-path)"'
+alias done_kind='export KUBECONFIG=""'
+
+#
+# GOJEK related configurations
+#
+
+# KOPS config
+export KOPS_STATE_STORE=s3://aws-kops/kops

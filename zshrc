@@ -136,23 +136,6 @@ function listening_on_port() {
   lsof -nP -i4TCP:"$1" | grep LISTEN
 }
 
-
-# BaritoFlow - Producer
-BARITO_KAFKA_BROKERS="localhost:9092"
-BARITO_CONSUL_URL=""
-BARITO_CONSUL_KAFKA_NAME="kafka"
-BARITO_PRODUCER_ADDRESS=":8080"
-BARITO_KAFKA_PRODUCER_TOPIC="producer-topic"
-BARITO_PRODUCER_MAX_RETRY=10
-BARITO_PRODUCER_MAX_TPS=100
-
-# BaritoRouter
-BARITO_PRODUCER_ROUTER=""
-BARITO_KIBANA_ROUTER=""
-BARITO_ROUTER_MARKET_URL=""
-BARITO_PROFILE_API_PATH=""
-BARITO_PROFILE_API_BY_CLUSTERNAME_PATH=""
-
 # Config related to Kubernetes
 alias k="kubectl"
 alias mk="minikube"
@@ -186,10 +169,3 @@ export LC_ALL=en_US.UTF-8
 # Config KIND (Kubernetes in Docker)
 alias start_kind='export KUBECONFIG="$(kind get kubeconfig-path)"'
 alias done_kind='export KUBECONFIG=""'
-
-#
-# GOJEK related configurations
-#
-
-# KOPS config
-export KOPS_STATE_STORE=s3://aws-kops/kops

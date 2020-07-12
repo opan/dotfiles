@@ -60,12 +60,11 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git ruby zsh-nvm
+  git ruby zsh-nvm tmux elixir
 )
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export POWERLINE_PATH="/Users/opanmustopah/Library/Python/3.6/lib/python/site-packages/powerline"
-export PATH=$PATH:/Users/opanmustopah/.chefdk/gem/ruby/2.6.0/bin
 
 # Load GO languange
 export GOPATH=/opt/go

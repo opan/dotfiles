@@ -11,3 +11,19 @@
 9. Telegram (all): (via App Store or Microsoft Store)
 10. Golang (all): (via brew)
 11. Rbenv (all): https://github.com/rbenv/rbenv#installation
+
+
+### Configurations
+
+#### Rbenv
+Once installed:
+
+1. Run `rbenv init`.
+2. There should an instruction to add the following lines to `.zshrc` or `.bashrc` (whether you used zsh or not):
+  ```
+  # Load rbenv automatically by appending
+  # the following to ~/.zshrc:
+
+  eval "$(rbenv init - zsh)"
+  ```
+3. Reload rc file with `source ~/.zshrc` or `source ~/.bashrc`.

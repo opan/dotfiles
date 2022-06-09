@@ -16,6 +16,12 @@
 
 ### Configurations
 
+### SSH Key
+
+1. Generate new ssh key with: `ssh-keygen -t rsa`
+2. Input passphrase if asked.
+3. By default the private and public key will be generate in the home directory, e.g: `~/.ssh/id_rsa`.
+
 #### Rbenv
 Once installed:
 

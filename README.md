@@ -8,4 +8,5 @@
 6. slack (all): (via App Store or Microsoft Store)
 7. zoom (all): https://zoom.us/download
 8. vscode (all): https://code.visualstudio.com/download
-9. 
+9. Telegram (all): (va App Store or Microsoft Store)
+10. 

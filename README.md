@@ -1,16 +1,17 @@
 ### What to install for new workspace
 
-1. iTerm (mac): https://iterm2.com/
+1. iTerm2 (mac): https://iterm2.com/
 2. brew (mac, ubuntu): https://brew.sh/
 3. Tmux (all): https://github.com/tmux/tmux/wiki/Installing
 4. oh-my-zsh (all): https://ohmyz.sh/#install
-5. fzf (all): https://github.com/junegunn/fzf
-6. slack (all): (via App Store or Microsoft Store)
-7. zoom (all): https://zoom.us/download
-8. vscode (all): https://code.visualstudio.com/download
-9. Telegram (all): (via App Store or Microsoft Store)
-10. Golang (all): (via brew)
-11. Rbenv (all): https://github.com/rbenv/rbenv#installation
+5. fzf (all) (optional): https://github.com/junegunn/fzf
+6. z (all): https://github.com/rupa/z
+7. slack (all): (via App Store or Microsoft Store)
+8. zoom (all): https://zoom.us/download
+9. vscode (all): https://code.visualstudio.com/download
+10. Telegram (all): (via App Store or Microsoft Store)
+11. Golang (all): (via brew)
+12. Rbenv (all): https://github.com/rbenv/rbenv#installation
 
 
 ### Configurations

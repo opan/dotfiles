@@ -27,3 +27,8 @@ Once installed:
   eval "$(rbenv init - zsh)"
   ```
 3. Reload rc file with `source ~/.zshrc` or `source ~/.bashrc`.
+4. Confirm the `rbenv` installation is correct by running below command:
+   ```
+   curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
+   ```
+   

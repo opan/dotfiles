@@ -8,5 +8,6 @@
 6. slack (all): (via App Store or Microsoft Store)
 7. zoom (all): https://zoom.us/download
 8. vscode (all): https://code.visualstudio.com/download
-9. Telegram (all): (va App Store or Microsoft Store)
-10. 
+9. Telegram (all): (via App Store or Microsoft Store)
+10. Golang (all): (via brew)
+11. Rbenv (all): https://github.com/rbenv/rbenv#installation

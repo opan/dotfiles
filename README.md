@@ -5,7 +5,7 @@
 3. Tmux (all): https://github.com/tmux/tmux/wiki/Installing
 4. oh-my-zsh (all): https://ohmyz.sh/#install
 5. fzf (all) (optional): https://github.com/junegunn/fzf
-6. z (all): https://github.com/rupa/z
+6. fasd (all): (via brew)
 7. slack (all): (via App Store or Microsoft Store)
 8. zoom (all): https://zoom.us/download
 9. vscode (all): https://code.visualstudio.com/download
@@ -22,7 +22,13 @@
 2. Input passphrase if asked.
 3. By default the private and public key will be generate in the home directory, e.g: `~/.ssh/id_rsa`.
 
-#### Rbenv
+### Tmux
+
+1. Install tmux with: `brew install tmux`
+2. Create a new config file if not exist: `touch ~/.tmux.conf`.
+3. Copy the config from /tmux.conf
+
+### Rbenv
 Once installed:
 
 1. Run `rbenv init`.
@@ -38,4 +44,8 @@ Once installed:
    ```
    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
    ```
-   
+
+### fasd
+
+1. Install with `brew update && brew install fasd`.
+2. Add `eval "$(fasd --init auto)"` to the rc file.

@@ -12,7 +12,8 @@
 10. Telegram (all): (via App Store or Microsoft Store)
 11. Golang (all): (via brew)
 12. Rbenv (all): https://github.com/rbenv/rbenv#installation
-
+13. PostgreSQL (all): (via brew)
+14. Jumpcut (free clipboard manager): (via brew)
 
 ### Configurations
 
@@ -49,3 +50,18 @@ Once installed:
 
 1. Install with `brew update && brew install fasd`.
 2. Add `eval "$(fasd --init auto)"` to the rc file.
+
+### PostgreSQL
+
+1. Install with `brew install postgresql`, for specific version, add `@<version>`.
+2. To start the PostgreSQL service, run `brew services restart postgresql` or `brew services restart postgresql@<version>`.
+3. Install `libpq` with `brew install libpq` if required.
+4. Run `echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.zshrc`
+
+Notice:
+On macOS m1 chip, you will probably facing an issue while installing `pg` gem. Try step 3 and 4 to fix that.
+
+### Jumpcut
+
+1. Install with `brew install --cask jumpcut`
+2. Trigger with `Control + Option + V`.

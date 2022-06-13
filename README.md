@@ -14,6 +14,7 @@
 12. Rbenv (all): https://github.com/rbenv/rbenv#installation
 13. PostgreSQL (all): (via brew)
 14. Jumpcut (free clipboard manager): (via brew)
+15. DBeaver: https://dbeaver.io/download/ or via brew
 
 ### Configurations
 
@@ -28,6 +29,29 @@
 1. Install tmux with: `brew install tmux`
 2. Create a new config file if not exist: `touch ~/.tmux.conf`.
 3. Copy the config from /tmux.conf
+
+### Oh-My-Zsh
+
+Once installed:
+
+1. Install `spaceship` by running the commands below:
+  ```
+  git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+  ```
+2. Install Powerline fonts running the commands below:
+  ```
+  # clone
+  git clone https://github.com/powerline/fonts.git --depth=1
+  # install
+  cd fonts
+  ./install.sh
+  # clean-up a bit
+  cd ..
+  rm -rf fonts
+  ```
+3. Change terminal fonts to use the Powerline fonts, on Mac, change the iTerm2 fonts to fonts that ends with `for Powerline`.
+4. Set zsh theme to `spaceship` in `~/.zshrc`, `ZSH_THEME="spaceship"`.
 
 ### Rbenv
 Once installed:

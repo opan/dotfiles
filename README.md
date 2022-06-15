@@ -51,7 +51,36 @@ Once installed:
   rm -rf fonts
   ```
 3. Change terminal fonts to use the Powerline fonts, on Mac, change the iTerm2 fonts to fonts that ends with `for Powerline`.
-4. Set zsh theme to `spaceship` in `~/.zshrc`, `ZSH_THEME="spaceship"`.
+4. Configure zsh to use `spaceship` theme:
+  ```
+  ZSH_THEME="spaceship"
+
+  ...
+
+  # Spaceship config
+  SPACESHIP_PROMPT_ORDER=(
+    user
+    host
+    dir
+    git
+    ruby
+    golang
+    terraform
+    exit_code
+    line_sep
+    char
+    kubectl
+  )
+
+  SPACESHIP_PROMPT_ADD_NEWLINE=true
+  SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=false
+  SPACESHIP_PROMPT_SEPARATE_LINE=true
+  SPACESHIP_CHAR_SYMBOL="›"
+  SPACESHIP_CHAR_PREFIX=" "
+  SPACESHIP_CHAR_SUFFIX=" "
+
+  # For other options, refer to the official spaceship docs
+  ```
 
 ### Rbenv
 Once installed:

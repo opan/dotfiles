@@ -4,7 +4,7 @@
 2. brew (mac, ubuntu): https://brew.sh/
 3. Tmux (all): https://github.com/tmux/tmux/wiki/Installing
 4. oh-my-zsh (all): https://ohmyz.sh/#install
-5. fzf (all) (optional): https://github.com/junegunn/fzf
+5. fzf (all): https://github.com/junegunn/fzf
 6. fasd (all): (via brew)
 7. slack (all): (via App Store or Microsoft Store)
 8. zoom (all): https://zoom.us/download
@@ -30,6 +30,16 @@
 2. Create a new config file if not exist: `touch ~/.tmux.conf`.
 3. Copy the config from /tmux.conf
 
+### FZF
+
+To install:
+```
+brew install fzf
+
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+```
+
 ### Oh-My-Zsh
 
 Once installed:
@@ -54,6 +64,10 @@ Once installed:
 4. Configure zsh to use `spaceship` theme:
   ```
   ZSH_THEME="spaceship"
+  
+  ...
+
+  plugins=(git ruby zsh-interactive-cd golang)
 
   ...
 

@@ -82,6 +82,8 @@ Once installed:
   # For other options, refer to the official spaceship docs
   ```
 
+5. Then reload `source ~/.zshrc`.
+
 ### Rbenv
 Once installed:
 
@@ -118,3 +120,10 @@ On macOS m1 chip, you will probably facing an issue while installing `pg` gem. T
 
 1. Install with `brew install --cask jumpcut`
 2. Trigger with `Control + Option + V`.
+
+### VSCode
+
+For OSX, run this command to enabling scrolling with `hjkl` key:
+```
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+```

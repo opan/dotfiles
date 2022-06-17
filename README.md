@@ -126,6 +126,8 @@ Once installed:
 2. To start the PostgreSQL service, run `brew services restart postgresql` or `brew services restart postgresql@<version>`.
 3. Install `libpq` with `brew install libpq` if required.
 4. Run `echo 'export PATH="/opt/homebrew/opt/libpq/bin:$PATH"' >> ~/.zshrc`
+5. To check if the postgres is running run `brew services info postgresql@<version>`
+6. To login to the default database run `psql postgres`.
 
 Notice:
 On macOS m1 chip, you will probably facing an issue while installing `pg` gem. Try step 3 and 4 to fix that.

@@ -13,8 +13,9 @@
 11. Golang (all): (via brew)
 12. Rbenv (all): https://github.com/rbenv/rbenv#installation
 13. PostgreSQL (all): (via brew)
-14. Jumpcut (free clipboard manager): (via brew)
-15. DBeaver: https://dbeaver.io/download/ or via brew
+14. Jumpcut (free clipboard manager) (mac): (via brew)
+15. DBeaver (all): https://dbeaver.io/download/ or via brew
+16. nvm (all): https://github.com/nvm-sh/nvm#installing-and-updating
 
 ### Configurations
 
@@ -143,3 +144,11 @@ For OSX, run this command to enabling scrolling with `hjkl` key:
 ```
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 ```
+
+### NVM
+
+To install, follow below instructions:
+
+1. Install with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash`.
+2. Reload profile with `source ~/.zshrc`.
+3. Install NodeJS with `nvm install node`, this command will install the latest stable version.

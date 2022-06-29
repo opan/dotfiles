@@ -152,3 +152,4 @@ To install, follow below instructions:
 1. Install with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash`.
 2. Reload profile with `source ~/.zshrc`.
 3. Install NodeJS with `nvm install node`, this command will install the latest stable version.
+4. Install Yarn with `npm install --global yarn`.

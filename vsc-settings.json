@@ -1,86 +1,56 @@
 {
-    "workbench.colorTheme": "Default Dark+",
-    "editor.fontSize": 12,
-    "editor.quickSuggestions": {
-        "comments": "on",
-        "strings": "on",
-        "other": "on"
+    "chat.instructionsFilesLocations": {
+        "/Users/opan.mustopah/Library/Application Support/Code/User/profiles": true
     },
-    "editor.accessibilityPageSize": 9,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4o-mini",
+
+    // ---- Vim core options (your `set` lines) ----
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.smartcase": true,
     "vim.useSystemClipboard": true,
-    "redhat.telemetry.enabled": false,
-    "go.toolsManagement.autoUpdate": true,
-    "workbench.startupEditor": "none",
-    "editor.detectIndentation": true,
-    "editor.tabSize": 2,
-    "editor.minimap.enabled": false,
-    "editor.wordWrap": "on",
-    "go.buildFlags": [
-        "-tags=wireinject"
+
+    // ---- Plugins VSCodeVim emulates natively ----
+    "vim.surround": true,
+    "vim.easymotion": true,
+    "vim.leader": "\\",              // your leader (default backslash)
+
+
+    // ---- Normal-mode remaps: splits, tabs, leader keys ----
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // <c-h/j/k/l> — move between editor splits
+      { "before": ["<C-h>"], "commands": ["workbench.action.navigateLeft"] },
+      { "before": ["<C-l>"], "commands": ["workbench.action.navigateRight"] },
+      { "before": ["<C-k>"], "commands": ["workbench.action.navigateUp"] },
+      { "before": ["<C-j>"], "commands": ["workbench.action.navigateDown"] },
+
+        // tab navigation (your <s-left>/<s-right>)
+        { "before": ["<S-left>"],  "commands": ["workbench.action.previousEditor"] },
+        { "before": ["<S-right>"], "commands": ["workbench.action.nextEditor"] },
+
+        // leader mappings
+        { "before": ["<leader>", "d"], "commands": ["workbench.action.toggleSidebarVisibility"] },
+        { "before": ["<leader>", "t"], "commands": ["workbench.action.files.newUntitledFile"] },
+        { "before": ["<leader>", "c"], "commands": ["workbench.action.closeActiveEditor"] },
+
+        // ; for buffer list, <c-p> for files
+        { "before": [";"],     "commands": ["workbench.action.showAllEditors"] },
+        { "before": ["<C-p>"], "commands": ["workbench.action.quickOpen"] }
     ],
-    // "go.goroot": "/opt/homebrew/Cellar/go/1.19.3/libexec/",
-    "go.alternateTools": {
-        "go": "/opt/homebrew/bin/go"
+
+    // ---- VSCode-native editor options (your `set` lines) ----
+    "editor.lineNumbers": "on",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "editor.renderLineHighlight": "line",
+    "editor.foldingStrategy": "indentation",
+
+    // ---- Go: tabs, width 8 (your autocmd Filetype go) ----
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.tabSize": 4
     },
-    "ruby.intellisense": "rubyLocate",
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.includeLanguages": {
-        "erb": "html"
-    },
-    "solargraph.completion": true,
-    "html.suggest.html5": true,
-    "security.workspace.trust.untrustedFiles": "newWindow",
-    // Causes the debug view to automatically appear when a breakpoint is hit. This
-    // setting is global and not configurable per-language.
-    "debug.openDebug": "openOnDebugBreak",
-    // By default, VS Code will only switch to the Debug Console when you start
-    // debugging the first time in a session. This setting tells VS Code to always
-    // switch to the Debug Console when starting a session, so you can see the
-    // programs output.
-    "debug.internalConsoleOptions": "openOnSessionStart",
-    "[dart]": {
-        // Automatically format code on save and during typing of certain characters
-        // (like `;` and `}`).
-        "editor.formatOnSave": true,
-        "editor.formatOnType": true,
-        // Draw a guide line at 80 characters, where Dart's formatting will wrap code.
-        "editor.rulers": [
-            80
-        ],
-        // Disables built-in highlighting of words that match your selection. Without
-        // this, all instances of the selected text will be highlighted, interfering
-        // with Dart's ability to highlight only exact references to the selected variable.
-        "editor.selectionHighlight": false,
-        // By default, VS Code prevents code completion from popping open when in
-        // "snippet mode" (editing placeholders in inserted code). Setting this option
-        // to `false` stops that and allows completion to open as normal, as if you
-        // weren't in a snippet placeholder.
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
-        // By default, VS Code will pre-select the most recently used item from code
-        // completion. This is usually not the most relevant item.
-        //
-        // "first" will always select top item
-        // "recentlyUsedByPrefix" will filter the recently used items based on the
-        //     text immediately preceding where completion was invoked.
-        "editor.suggestSelection": "first",
-        // Allows pressing <TAB> to complete snippets such as `for` even when the
-        // completion list is not visible.
-        "editor.tabCompletion": "onlySnippets",
-        // By default, VS Code will populate code completion with words found in the
-        // current file when a language service does not provide its own completions.
-        // This results in code completion suggesting words when editing comments and
-        // strings. This setting will prevent that.
-        "editor.wordBasedSuggestions": "off",
-    },
-    "ruby.rubocop.executePath": "rubocop",
-    "[python]": {
-        "editor.formatOnType": true
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "github.copilot.editor.enableAutoCompletions": true
+    "editor.fontSize": 11
 }
